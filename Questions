@@ -12,7 +12,7 @@ order by incident
 
 select EXTRACT(YEAR FROM incident_date) as incident, is_officer_complaint , count(*) as count from data_allegation where EXTRACT(YEAR FROM incident_date) > 2000 and EXTRACT(YEAR FROM incident_date) < 2020 group by  incident, is_officer_complaint order by  incident, is_officer_complaint
 
-3) The seasonality factor in police allegations ? 
+3) Do seasons affect police allegations ? 
 
 select  EXTRACT(QUARTER FROM incident_date) as quarter,  count(*) as count from data_allegation group by quarter order by quarter
 
