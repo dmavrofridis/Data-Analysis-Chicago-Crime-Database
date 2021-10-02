@@ -4,17 +4,9 @@ Question 1: Are police officers more likely to report on one another now than pr
 
 1) How did the allegation numbers change with time?
 
-select EXTRACT(YEAR FROM incident_date) as incident,  count(is_extracted_summary) as count from data_allegation 
-group by incident 
-order by incident
-
 2) How has the ratio of police related allegations changed over time? 
 
-select EXTRACT(YEAR FROM incident_date) as incident, is_officer_complaint , count(*) as count from data_allegation where EXTRACT(YEAR FROM incident_date) > 2000 and EXTRACT(YEAR FROM incident_date) < 2020 group by  incident, is_officer_complaint order by  incident, is_officer_complaint
-
 3) Do seasons affect police allegations ? 
-
-select  EXTRACT(QUARTER FROM incident_date) as quarter,  count(*) as count from data_allegation group by quarter order by quarter
 
 4) Do more allegations occur while officers are off duty?
 
