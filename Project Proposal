@@ -3,7 +3,7 @@ Can police officers be grouped together based on the allegations made against th
 If so, what are the most common traits that characterize each group?
 Do the identified groups show similarities in the types of misconduct and allegations made against them?
 
-Project Proposal for 10/04/2021 DIMITRIS
+Project Proposal (The Exalted Spartans)
 Hi everyone and thank you for taking the time to read this:)
 By working with data provided by the Invisible Institute's Citizen's Police Data Project,
 we aspire to identify different groups of police officers that share similar traits and
@@ -12,19 +12,11 @@ Additionally, after the grouping of the police officers is complete, we will exp
 the connections between certain police officer groups and the allegations they receive.
 As a result, we will be able to understand the connection between the severity of the reported allegations and the police officer's behavior.
 Finally, we will draw our conclusion by identifying patterns and similarities in the allegations made against certain
-police officer groups, whether those groups tend to repeat certain types of misconducts and how those patterns have changed over time.
+police officer groups and whether these groups tend to repeat certain types of misconducts and how those patterns have changed over time.
+By implementing an NLP model as well as ML algorithms we will quantify the severity of allegation types while grouping them
+accordingly. Thus, our algorithm will generate the information required for us to further understand whether some of the 
+identified police groups are connected to similar alegation types. By implementing the NLP algorithm and using the detailed reports and
+complaints available in CPDP, we will be also attempting to establish a connection between allegation severity in certain police groups and how 
+it may have changed over time.
 
 
-NLP for 10/04/2021  ALEX
-Through our model we will quantify the severity of allegation types and group them
-accordingly. Thus, we will understand whether allegations are becoming more severe
-with time and establish a connection between allegation severity and certain police groups.
-
-
-
-Methodology for 10/04/2021
-In the proposal we will understand how the allegations types have changed with type,
-how severe or mild they are becoming with the time and whether certain groups of police officers
-tend to behave in a certain way towards certain groups of people. By doing so we will understand the connection 
-between the severity of allegations and police behavior. Based on that, we will draw the conclusion of whether or not police 
-officers are misbehaving more frequently and the severity of allegations is becoming more severe.
