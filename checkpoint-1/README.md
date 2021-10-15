@@ -31,7 +31,7 @@ using JetBrain's Datagrip through a valid connection to the CPDB database.
 
 
 ## Question 5:
-#### What is the percentage of officers that used excessive force when they were not required to do so?  For example, when the subject is unarmed.
+#### What is the percentage of officers that used excessive force when they were not required to do so?  For example, when the subject was unarmed.
 
 
 ## Question 6:
