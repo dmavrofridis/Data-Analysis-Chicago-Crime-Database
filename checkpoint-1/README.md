@@ -8,7 +8,7 @@ be best if you would carefully follow the next steps.
 Before you continue please be aware that checkpoint 1 was completed 
 using JetBrain's Datagrip through a valid connection to the CPDB database.
 
-Please make sure to download Datagrip and properly set up the connection to the CPDB 
+- Please make sure to download Datagrip and properly set up the connection to the CPDB 
 database.
 
 ## Question 1:
