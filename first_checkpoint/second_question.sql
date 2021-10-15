@@ -10,3 +10,4 @@ select EXTRACT(YEAR FROM incident_date) as incident, is_officer_complaint,
         and EXTRACT(YEAR FROM incident_date) < 2020
 group by  incident, is_officer_complaint
 order by  incident, is_officer_complaint
+
