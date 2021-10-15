@@ -20,16 +20,16 @@ database.
 
 
 ## Question 3:
-####Does the location of the allegations made against a police officer match the one in which they most frequently mention in their tactical reports?
+#### Does the location of the allegations made against a police officer match the one in which they most frequently mention in their tactical reports?
 
 
 ## Question 4:
-####Is there a relationship between the number of awards and rewards police officers receive and the areas in which they operate? If so, do police officers that operate in high risk areas receive more or less awards?
+#### Is there a relationship between the number of awards and rewards police officers receive and the areas in which they operate? If so, do police officers that operate in high risk areas receive more or less awards?
 
 
 ## Question 5:
 #### What is the percentage of officers that used excessive force when they were not required to do so?  For example, when the subject is unarmed.
 
 
-##Question 6:
-####Do police officers who use excessive force receive more awards than those who do not? Based on our previous findings.
+## Question 6:
+#### Do police officers who use excessive force receive more awards than those who do not? Based on our previous findings.
