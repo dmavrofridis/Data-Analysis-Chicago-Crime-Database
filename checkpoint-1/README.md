@@ -8,8 +8,10 @@ be best if you would carefully follow the next steps.
 Before you continue please be aware that checkpoint 1 was completed 
 using JetBrain's Datagrip through a valid connection to the CPDB database.
 
-- Please make sure to download Datagrip and properly set up the connection to the CPDB 
-database.
+## Steps to follow:
+- Please make sure to download and install Datagrip on your machine.
+- Set up the connection to the CPDB database in Datagrip by inserting new data source from URL and following the steps that are posted on Canvas.
+- After setting up the connection, you can run each one of the queries either by copy pasting them into the terminal or by directly opening the sql files from the project folder.
 
 ## Question 1:
 #### Is there a solid relationship between the number of allegations that each officer receives and the amount of awards received?
