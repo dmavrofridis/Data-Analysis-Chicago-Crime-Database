@@ -14,8 +14,9 @@ select office_id_with_score.officer_id, reward_number, office_id_with_score.acti
 join  office_id_with_score  on   rewards_count_by_officer_id.officer_id = office_id_with_score.officer_id)
 
 select reward_number, action_sub_category, count(officer_id) as count from rewards_action_score
+where action_sub_category is not NULL
 group by  reward_number, action_sub_category
-order by  action_sub_category desc
+order by  action_sub_category desc, count desc, reward_number
 
 
 
