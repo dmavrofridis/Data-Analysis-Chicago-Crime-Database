@@ -27,12 +27,16 @@ using JetBrain's Datagrip through a valid connection to the CPDB database.
 
 
 ## Question 4:
-#### Is there a relationship between the number of awards and rewards police officers receive and the areas in which they operate? If so, do police officers that operate in high risk areas receive more or less awards?
+#### What are the most dangerous areas in Chicago based on the types of weapons used by subjects in the tactical response reports?
 
 
 ## Question 5:
-#### What is the percentage of officers that used excessive force when they were not required to do so?  For example, when the subject was unarmed.
+#### What are the most dangerous areas in Chicago based on the severity of the police response (using the action response categories in the tactical response reports)?
 
 
 ## Question 6:
+#### What is the percentage of officers that used excessive force when they were not required to do so?  For example, when the subject was unarmed.
+
+
+## Question 7:
 #### Do police officers who use excessive force receive more awards than those who do not? Based on our previous findings.
