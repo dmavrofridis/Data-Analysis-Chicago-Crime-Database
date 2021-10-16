@@ -26,6 +26,3 @@ select  officers_count_by_number_allegations_and_reward.number_allegations, offi
 from officers_count_by_number_allegations_and_reward join max_temp_officer_alleg on max_temp_officer_alleg.number_allegations = officers_count_by_number_allegations_and_reward.number_allegations and officers_count_by_number_allegations_and_reward.number_of_officers = max_temp_officer_alleg.max_officers_per_allegation)
 
 select number_allegations, reward_number from  most_probable_number_of_reward_for_number_of_allegation
-
-
-

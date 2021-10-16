@@ -6,4 +6,3 @@ where weapon_type = 'FIREARM - SEMI-AUTOMATIC' or  weapon_type = 'FIREARM - REVO
        weapon_type = 'KNIFE/OTHER CUTTING INSTRUMENT' or weapon_type = 'FIREARM - RIFLE' or weapon_type = 'VEHICLE - ATTEMPTED TO STRIKE OFFICER WITH VEHICLE'
 group by street, weapon_type
 order by counts desc
-

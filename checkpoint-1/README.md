@@ -47,4 +47,3 @@ using JetBrain's Datagrip through a valid connection to the CPDP database.
 ## Question 7:
 #### Do police officers who use potentially lethal force also receive a great number of awards?
 - ##### [Question 7 SQL code](src/question_7.sql)
-
