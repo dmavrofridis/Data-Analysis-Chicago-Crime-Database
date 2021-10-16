@@ -1,7 +1,4 @@
-with how_many_allegations_recieved_one_cop as (
-    select count(allegation_id) as number_allegations, officer_id from data_officerallegation
-group by officer_id
-order by number_allegations desc),
+with
       rewards_count_by_officer_id as (select officer_id, count(*) as reward_number from  data_award
        group by  officer_id order by reward_number desc ),
 
