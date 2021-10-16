@@ -16,6 +16,9 @@ using JetBrain's Datagrip through a valid connection to the CPDB database.
 
 ## Question 1:
 #### Is there a solid relationship between the number of allegations that each officer receives and the amount of awards received?
+- In order to run get the appropriate results, you need to copy and paste or open the following file and run it in datagrip.
+- ##### [Question 1 SQL code](The-Exalted-Spartans/checkpoint-1/question_1.sql)
+
 
 ## Question 2:
 #### Based on the available tactical response reports, which locations in Chicago received the greatest number of altercations? In other words, what districts or streets may be the most dangerous.
