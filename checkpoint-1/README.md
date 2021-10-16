@@ -17,6 +17,9 @@ using JetBrain's Datagrip through a valid connection to the CPDP database.
 - You can also find the relevant code by clicking on the hyperlinks under each question below.
 - For each block of code that you run, you are going to be served with the appropriate results.
 
+## Results & Analysis:
+Please make sure to read the findings report in order to completely understand the results for each one of the questions below.
+
 ## Question 1:
 #### Is there a solid relationship between the number of allegations that each officer receives and the amount of awards received?
 - ##### [Question 1 SQL code](src/question_1.sql)
