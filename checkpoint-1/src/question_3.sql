@@ -7,6 +7,7 @@ order by counts desc)
 
 
 select * from  dangerous_areas
+where alleg_locations is not Null and alleg_locations != '?' and alleg_locations != ''
 
 
 
