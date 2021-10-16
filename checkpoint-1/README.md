@@ -17,7 +17,7 @@ using JetBrain's Datagrip through a valid connection to the CPDB database.
 ## Question 1:
 #### Is there a solid relationship between the number of allegations that each officer receives and the amount of awards received?
 - In order to run get the appropriate results, you need to copy and paste or open the following file and run it in datagrip.
-- ##### [Question 1 SQL code](checkpoint-1/src/question_1.sql)
+- ##### [Question 1 SQL code](src/question_1.sql)
 
 
 ## Question 2:
