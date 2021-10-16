@@ -20,8 +20,6 @@ order by  action_sub_category desc, count desc, reward_number
 
 
 
-
-
 --select officer_id, reward_number, trr_actionresponse.action_sub_category from  rewards_count_by_officer_id
 --join trr_actionresponse on trr_actionresponse.
 
