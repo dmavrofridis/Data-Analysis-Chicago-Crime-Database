@@ -7,4 +7,4 @@ select  action_sub_category, weapon_type, count(trr_id) as count from  weapon_re
 where  weapon_type  = 'HANDS/FISTS'  or  weapon_type  = 'FEET ' or weapon_type = 'MOUTH (SPIT,BITE,ETC)' or
       weapon_type = 'FEET' or weapon_type = 'VERBAL THREAT (ASSAULT)' or weapon_type = 'MOUTH (SPIT,BITE,ETC)'
 group by action_sub_category, weapon_type
-order by action_sub_category desc
+order by action_sub_category desc , count
