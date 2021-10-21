@@ -1,1 +1,8 @@
-Checkpoint 2
+#Checkpoint 2
+
+##Instructions:
+
+
+##Prerequisites:
+
+Download Tableau
