@@ -16,6 +16,9 @@ connection to the CPDP database.
 
 ## Next steps:
 - After setting up the connection, you can run each one of the files by opening them up using the Tableau user interface. 
+- You may be prompted to enter the CPDP connection password in order to gain access to the visualizations.
+- You may encounter an error about custom SQL code being used, if so please select "yes" from the given options.
+- If you receive a message about files missing, please choose the "regenerate file" option and store the new file somewhere convenient.
 - By opening up each file from the src folder, you are going to be served with the appropriate visual results.
 
 ## Results & Analysis:
