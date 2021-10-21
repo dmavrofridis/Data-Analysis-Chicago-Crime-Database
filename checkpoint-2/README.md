@@ -25,13 +25,10 @@ connection to the CPDP database.
 Please make sure to read the findings report in order to completely understand the results for each one of the questions below.
 
 ## Question 1:
-#### Is there a solid relationship between the number of allegations that each officer receives and the amount of awards received?
+#### What is the connection between awards and allegations?  That is to say, when allegations increase do awards increase or is there some other correlation?
 - ##### [Tableau Question 1](src/question_1.twb)
 
 ## Question 2:
-#### Based on the available tactical response reports, which locations in Chicago received the greatest number of altercations? In other words, what districts or streets may be the most dangerous.
+#### Based on TRRs, what streets experienced the greatest number of incidents?  Of these, in what percentage of these did the police respond violently (eg. the action response category was greater than or equal to 4)?
 - ##### [Tableau Question 2](src/question_2.twb)
 
-## Question 3:
-#### Does the location of the allegations made against a police officer match the one in which they most frequently mention in their tactical reports?
-- ##### [Tableau Question 3](src/question_3.twb)
