@@ -26,7 +26,8 @@ Please make sure to read the findings report in order to completely understand t
 
 ## Question 1:
 #### What is the connection between awards and allegations?  That is to say, when allegations increase do awards increase or is there some other correlation?
-- ##### [Tableau Question 1](src/question_1.twb)
+- ##### [Tableau Question 1a](src/question_1a.twb)
+- ##### [Tableau Question 1b](src/question_1b.twb)
 
 ## Question 2:
 #### Based on TRRs, what streets experienced the greatest number of incidents?  Of these, in what percentage of these did the police respond violently (eg. the action response category was greater than or equal to 4)?
