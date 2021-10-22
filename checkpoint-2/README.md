@@ -26,10 +26,16 @@ Please make sure to read the findings report in order to completely understand t
 
 ## Question 1:
 #### What is the connection between awards and allegations?  That is to say, when allegations increase do awards increase or is there some other correlation?
+##### Question 1 is broken down into 2 different answers labeled question_1a and question_1b. In order to generate the appropriate graphics we were required to write two different SQL queries. Therefore, for question_1a we obtained a count of both their awards and allegations. The two graphs included in part A, represent the number of awards per each count of allegations in two different but colorful ways. For question_1b 
 - ##### [Tableau Question 1a](src/question_1a.twb)
 - ##### [Tableau Question 1b](src/question_1b.twb)
 
 ## Question 2:
 #### Based on TRRs, what streets experienced the greatest number of incidents?  Of these, in what percentage of these did the police respond violently (eg. the action response category was greater than or equal to 4)?
+##### For these visualizations, we obtained the number of incidents per location (in this case, locations were all streets). Afterwards we determined based on the action category rating, whether or not each incident involved a violent police response (eg. a weapon was discharged, melee force was used, etc.). As a result, question 2 generates 4 different graphs in order to represent police violence and it's relation to how dangerous certain streets in Chicago can be.
 - ##### [Tableau Question 2](src/question_2.twb)
+
+## Question 3:
+#### Is there a correlation between the number of tactical response reports filed by each officer and the number of awards that the officer received?
+- ##### [Tableau Question 3](src/question_3.twb)
 
