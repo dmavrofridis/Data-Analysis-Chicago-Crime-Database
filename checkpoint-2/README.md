@@ -37,5 +37,6 @@ Please make sure to read the findings report in order to completely understand t
 
 ## Question 3:
 #### Is there a correlation between the number of tactical response reports filed by each officer and the number of awards that the officer received?
+##### For question 3, we have successfully managed to generate two different charts in order to identify whether there exists a relationship between the TRR’s and the number of awards that the police officers receive. The two visualizations demonstrate something of a trend: as the officer is involved in more TRR incidents, they also will likely get more awards.
 - ##### [Tableau Question 3](src/question_3.twb)
 
