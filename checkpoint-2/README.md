@@ -26,7 +26,7 @@ Please make sure to read the findings report in order to completely understand t
 
 ## Question 1:
 #### What is the connection between awards and allegations?  That is to say, when allegations increase do awards increase or is there some other correlation?
-##### Question 1 is broken down into 2 different answers labeled question_1a and question_1b. In order to generate the appropriate graphics we were required to write two different SQL queries. Therefore, for question_1a we obtained a count of both their awards and allegations. The two graphs included in part A, represent the number of awards per each count of allegations in two different but colorful ways. For question_1b 
+##### Question 1 is broken down into 2 different answers labeled question_1a and question_1b. In order to generate the appropriate graphics we were required to write two different SQL queries. Therefore, for question_1a we obtained a count of both their awards and allegations. The two graphs included in part A, represent the number of awards per each count of allegations in two different but colorful ways. For question_1b, we are generating two different graphs. The first graph represents the distribution of police officers' counts with a certain number of rewards and allegations. For the second graph, we presented the average number of police officers rewards grouped by the number of allegations they receive.
 - ##### [Tableau Question 1a](src/question_1a.twb)
 - ##### [Tableau Question 1b](src/question_1b.twb)
 
