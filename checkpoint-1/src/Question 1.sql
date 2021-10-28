@@ -9,19 +9,21 @@ WITH area_info AS (
 )
 ,
 
+total_pop AS (
+    SELECT SUM(count) as population_total, area_id
+    FROM data_racepopulation
+    GROUP BY area_id
+)
+,
 -- JOIN area_info with population totals from data_racepopulation
 socio_economic_breakdown AS (
     SELECT id, median_income, name as community, polygon, population_total
     FROM area_info
-             JOIN (
-        SELECT SUM(count) as population_total, area_id
-        FROM data_racepopulation
-        GROUP BY area_id
-    ) AS total_pop ON total_pop.area_id = area_info.id
+             JOIN  total_pop ON total_pop.area_id = area_info.id
 )
 
 SELECT count(trr_trr.id) AS number_of_trrs, median_income, community, population_total, cast(count(trr_trr.id) as float) / population_total as policing
     FROM trr_trr
         JOIN socio_economic_breakdown ON st_within(trr_trr.point, socio_economic_breakdown.polygon)
     GROUP BY community, median_income, population_total
-    ORDER BY community
+    ORDER BY median_income
