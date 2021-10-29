@@ -19,7 +19,7 @@ action_response_breakdown AS (
 -- join count of high action_sub_categories on falling within community area
 SELECT count(CASE WHEN action_sub_category >= 4.0 THEN 1 END),
        median_income, community,
-       count(CASE WHEN action_sub_category >= 4.0 THEN 1 END) * 100.0 / sum(count(action_sub_category)) over() AS percentage FROM area_info
+       count(CASE WHEN action_sub_category >= 4.0 THEN 1 END) * 100.0 / count(CASE WHEN TRUE THEN 1 END) AS percentage_trrs_violent FROM area_info
     JOIN action_response_breakdown ON st_within(action_response_breakdown.point, area_info.polygon)
     GROUP BY median_income, community
 
