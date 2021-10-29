@@ -21,22 +21,22 @@ using JetBrain's Datagrip through a valid connection to the CPDP database.
 Please make sure to read the findings report in order to completely understand the results for each one of the questions below.
 
 ## Question 1:
-####Do officers over police areas of lower socioeconomic status more than higher status?
+#### Do officers over police areas of lower socioeconomic status more than higher status?
 - ##### [Question 1 SQL code](src/question_1.sql)
 
 ## Question 2:
-####Do officers respond more violently in areas of lower socioeconomic status?
+#### Do officers respond more violently in areas of lower socioeconomic status?
 - ##### [Question 2 SQL code](src/question_2.sql)
 
 ## Question 3:
-####Do officers over police in areas with different proportions of ethnicities (ie. areas with more African Americans)?
+#### Do officers over police in areas with different proportions of ethnicities (ie. areas with more African Americans)?
 - ##### [Question 3 SQL code](src/question_3.sql)
 
 ## Question 4:
-####Do officers respond more violently in areas with different proportions of ethnicities (ie. areas with more African Americans)?
+#### Do officers respond more violently in areas with different proportions of ethnicities (ie. areas with more African Americans)?
 - ##### [Question 4 SQL code](src/question_4.sql)
 
 
 ## Question 5:
-####Do officers over police / react more violently in areas with higher crime rates? 
+#### Do officers over police / react more violently in areas with higher crime rates? 
 - ##### [Question 5 SQL code](old_questions/question_5.sql)
