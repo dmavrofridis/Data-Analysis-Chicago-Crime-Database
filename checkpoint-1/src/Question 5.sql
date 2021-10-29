@@ -1,52 +1,77 @@
+--Question 4: Do officers react more violently in area with different ethnicties?
 
-WITH area_inf AS (
-select * from "Community Names and Numbers"
-),
-     crimes as (select * from "Crimes_2001_to_Present" ), joined_table as(
-         select * from "Crimes_2001_to_Present"  join  area_inf on area_inf."Community Number" = "Crimes_2001_to_Present"."Community Area"
-    ), crimes_by_community as (
-select "Community Name" as community,  count(*) crimes from  joined_table
-group by "Community Name"),
+--Construct a table which contains community areas with median income
+-- and polygon information
 
-     area_info AS (
-    SELECT * FROM data_area
+WITH area_info AS (
+    SELECT id,  name as community, polygon FROM data_area
         WHERE data_area.area_type LIKE 'community'
 )
 ,
--- add populations of areas together
 total_pop AS (
-    SELECT SUM(count) as population_total, area_id
-    FROM data_racepopulation
+    SELECT SUM(count) AS Population_total, area_id FROM data_racepopulation
     GROUP BY area_id
 )
 ,
--- JOIN area_info with population totals from data_racepopulation
-socio_economic_breakdown AS (
-    SELECT id, median_income, name as community, polygon, population_total
-    FROM area_info
-             JOIN  total_pop ON total_pop.area_id = area_info.id
-),
---join the count of trrs on location within a community
 
-without_race_orig as (
-SELECT count(trr_trr.id) AS number_of_trrs, median_income, community, population_total, cast(count(trr_trr.id) as float) / population_total as policing
-    FROM trr_trr
-        JOIN socio_economic_breakdown ON st_within(trr_trr.point, socio_economic_breakdown.polygon)
-    GROUP BY community, median_income, population_total
-    ORDER BY median_income), crimes_and_population as (
-select  crimes_by_community.community, cast(median_income as float4) as median_income  , crimes, population_total from crimes_by_community
-    join without_race_orig on crimes_by_community.community =  without_race_orig.community)
+ethnicity AS (
+    SELECT area_id,
+        SUM(COUNT) FILTER ( WHERE race = 'Black' ) AS BLACK,
+        SUM(COUNT) FILTER ( WHERE race = 'Hispanic' )AS HISPANIC,
+        SUM(COUNT) FILTER ( WHERE race = 'Asian' ) AS ASIAN,
+        SUM(COUNT) FILTER ( WHERE race = 'White' ) AS WHITE,
+        SUM(COUNT) FILTER ( WHERE race = 'Other' ) AS OTHER
+    FROM data_racepopulation
+    GROUP BY area_id
+    ORDER BY area_id
+)
+,
 
-select  sum(population_total) as population,   sum(crimes) as crimes ,  community as community, (sum(crimes) /sum(population_total)) as ratio from crimes_and_population
-group by community
+ethnicity_percentage AS (
+        SELECT total_pop.area_id,
+            CAST (BLACK AS float) * 100.0  / total_pop.population_total AS BLACK_PERCENT,
+            CAST (WHITE AS float) * 100.0 / total_pop.population_total AS WHITE_PERCENT,
+            CAST (HISPANIC AS float) * 100.0 / total_pop.population_total AS HISPANIC_PERCENT,
+            CAST (ASIAN AS float) * 100.0 / total_pop.population_total AS ASIAN_PERCENT,
+            CAST (OTHER AS float) * 100.0 / total_pop.population_total AS OTHER_PERCENT
 
+        FROM ethnicity
+            JOIN total_pop ON ethnicity.area_id = total_pop.area_id
+    )
 
+,
 
+area_with_percents AS (
+    SELECT BLACK_PERCENT, HISPANIC_PERCENT, WHITE_PERCENT, ASIAN_PERCENT,
+           OTHER_PERCENT, area_id, community, polygon
+    FROM ethnicity_percentage
+    JOIN area_info ON ethnicity_percentage.area_id = area_info.id
+)
 
+,
+-- create table which contains action response category for each officer in a TRR
+action_response_breakdown AS (
+    SELECT trr_trr.id, trr_trr.point, cast(action_sub_category as float) FROM trr_actionresponse
+        JOIN trr_trr ON trr_actionresponse.trr_id = trr_trr.id
+    WHERE action_sub_category IS NOT NULL
 
+)
+,almost_ready as (
+     SELECT area_id,
+       count(CASE WHEN action_sub_category >= 4.0 THEN 1 END),
 
+        community,
+       count(CASE WHEN action_sub_category >= 4.0 THEN 1 END) * 100.0 / sum(count(action_sub_category)) over() AS percentage_trrs_violent,
+        BLACK_PERCENT,
+        WHITE_PERCENT,
+        HISPANIC_PERCENT,
+        ASIAN_PERCENT,
+        OTHER_PERCENT
 
+FROM area_with_percents
+    JOIN action_response_breakdown ON st_within(action_response_breakdown.point, area_with_percents.polygon)
+    GROUP BY  community, BLACK_PERCENT, WHITE_PERCENT, HISPANIC_PERCENT, ASIAN_PERCENT, OTHER_PERCENT, area_id
+    ORDER BY area_id)
 
-
-
+select * from almost_ready join crime_ratio_community on crime_ratio_community.community =almost_ready.community
 
