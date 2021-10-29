@@ -22,31 +22,31 @@ Please make sure to read the findings report in order to completely understand t
 
 ## Question 1:
 #### Is there a solid relationship between the number of allegations that each officer receives and the amount of awards received?
-- ##### [Question 1 SQL code](src/question_1.sql)
+- ##### [Question 1 SQL code](old_questions/question_1.sql)
 
 ## Question 2:
 #### Based on the available tactical response reports, which locations in Chicago received the greatest number of altercations? In other words, what districts or streets may be the most dangerous.
-- ##### [Question 2 SQL code](src/question_2.sql)
+- ##### [Question 2 SQL code](old_questions/question_2.sql)
 
 ## Question 3:
 #### Does the location of the allegations made against a police officer match the one in which they most frequently mention in their tactical reports?
-- ##### [Question 3 SQL code](src/question_3.sql)
+- ##### [Question 3 SQL code](old_questions/question_3.sql)
 
 ## Question 4:
 #### What are the most dangerous areas in Chicago based on the types of weapons used by subjects in the tactical response reports?
-- ##### [Question 4 SQL code](src/question_4.sql)
+- ##### [Question 4 SQL code](old_questions/question_4.sql)
 
 
 ## Question 5:
 #### What are the most dangerous areas in Chicago based on the severity of the police response (using the action response categories in the tactical response reports)?
-- ##### [Question 5 SQL code](src/question_5.sql)
+- ##### [Question 5 SQL code](old_questions/question_5.sql)
 
 
 ## Question 6:
 #### What is the percentage of officers that used excessive force when they were not required to do so?  For example, when the subject was unarmed.
-- ##### [Question 6 SQL code](src/question_6.sql)
+- ##### [Question 6 SQL code](old_questions/question_6.sql)
 
 
 ## Question 7:
 #### Do police officers who use potentially lethal force also receive a great number of awards?
-- ##### [Question 7 SQL code](src/question_7.sql)
+- ##### [Question 7 SQL code](old_questions/question_7.sql)
