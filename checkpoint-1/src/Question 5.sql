@@ -1,7 +1,3 @@
---Question 4: Do officers react more violently in area with different ethnicties?
-
---Construct a table which contains community areas with median income
--- and polygon information
 
 WITH area_info AS (
     SELECT id,  name as community, polygon FROM data_area
