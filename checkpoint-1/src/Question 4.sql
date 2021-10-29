@@ -61,7 +61,7 @@ SELECT area_id,
        count(CASE WHEN action_sub_category >= 4.0 THEN 1 END),
 
         community,
-       count(CASE WHEN action_sub_category >= 4.0 THEN 1 END) * 100.0 / sum(count(action_sub_category)) over() AS percentage_trrs_violent,
+       count(CASE WHEN action_sub_category >= 4.0 THEN 1 END) * 100.0 / count(CASE WHEN TRUE THEN 1 END) AS percentage_trrs_violent,
         BLACK_PERCENT,
         WHITE_PERCENT,
         HISPANIC_PERCENT,

@@ -4,7 +4,7 @@
 -- and polygon information
 
 WITH area_info AS (
-    SELECT median_income, name as community, polygon FROM data_area
+    SELECT median_income,  name as community, polygon FROM data_area
         WHERE data_area.area_type LIKE 'community'
 )
 ,
