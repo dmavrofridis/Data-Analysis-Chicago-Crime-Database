@@ -37,7 +37,7 @@ SELECT count(trr_trr.id) AS number_of_trrs, median_income, community, population
 select  crimes_by_community.community, cast(median_income as float4) as median_income  , crimes, population_total from crimes_by_community
     join without_race_orig on crimes_by_community.community =  without_race_orig.community)
 
-select  sum(population_total) as population, sum(median_income) as median_income,  sum(crimes) as crimes ,  community as community, (sum(crimes) /sum(population_total)) as ratio from crimes_and_population
+select  sum(population_total) as population,   sum(crimes) as crimes ,  community as community, (sum(crimes) /sum(population_total)) as ratio from crimes_and_population
 group by community
 
 
