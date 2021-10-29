@@ -39,4 +39,4 @@ Please make sure to read the findings report in order to completely understand t
 
 ## Question 5:
 #### Do officers over police / react more violently in areas with higher crime rates? 
-- ##### [Question 5 SQL code](old_questions/question_5.sql)
+- ##### [Question 5 SQL code](src/question_5.sql)
