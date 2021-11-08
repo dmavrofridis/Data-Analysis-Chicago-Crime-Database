@@ -32,11 +32,11 @@ final as (
 select community from final)
 ,
      final_with_polyg as (
-         select polygon, subject_race, community, count(id) as trr_count
+             select polygon , subject_race, community, count(id) as trr_count
          from final
          group by polygon, subject_race, community
          order by trr_count desc
      )
 
-select * from final_with_polyg
+select (st_astext(polygon, 4326))  ,   subject_race, community,  trr_count from final_with_polyg
 
