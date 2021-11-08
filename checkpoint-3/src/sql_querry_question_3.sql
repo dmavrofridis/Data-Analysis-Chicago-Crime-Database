@@ -28,15 +28,13 @@ final as (
              JOIN socio_economic_breakdown ON st_within(trr_trr.point, socio_economic_breakdown.polygon
         ))
 
-, don_asled as(
-select community from final)
 ,
      final_with_polyg as (
-             select polygon , subject_race, community, count(id) as trr_count
+         select ST_AsGeoJSON(polygon, 4326) as geometry, subject_race, community, count(id) as trr_count
          from final
          group by polygon, subject_race, community
          order by trr_count desc
      )
 
-select (st_astext(polygon, 4326))  ,   subject_race, community,  trr_count from final_with_polyg
+select * from final_with_polyg
 
