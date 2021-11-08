@@ -58,7 +58,7 @@ join  filtered_even_further on filtered_even_further.officer_id = filtered_furth
 
 
 ----- NONE NULL ALLEGATIONS
-select count(*) from fin
+select * from fin
 where final_outcome  is not Null
 
 
