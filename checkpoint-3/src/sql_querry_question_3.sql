@@ -20,14 +20,23 @@ socio_economic_breakdown AS (
 --join the count of trrs on location within a community
 
 final as (
-    SELECT count(trr_trr.id) as number_of_incidents, subject_race,
-           community
-            FROM trr_trr JOIN socio_economic_breakdown ON st_within(trr_trr.point, socio_economic_breakdown.polygon
-)
-    group by subject_race, community
-    order by subject_race, community
-)
+    SELECT socio_economic_breakdown.polygon,
+           subject_race,
+           community,
+           trr_trr.id
+    FROM trr_trr
+             JOIN socio_economic_breakdown ON st_within(trr_trr.point, socio_economic_breakdown.polygon
+        ))
 
-select * from final
+, don_asled as(
+select community from final)
+,
+     final_with_polyg as (
+         select polygon, subject_race, community, count(id) as trr_count
+         from final
+         group by polygon, subject_race, community
+         order by trr_count desc
+     )
 
+select * from final_with_polyg
 
