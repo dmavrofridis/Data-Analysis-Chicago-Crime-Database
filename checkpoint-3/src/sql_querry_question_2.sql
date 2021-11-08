@@ -56,7 +56,10 @@ join  filtered_even_further on filtered_even_further.officer_id = filtered_furth
               left join data_officerallegation on crid = allegation_id
  )
 
-select * from fin
+
+----- NONE NULL ALLEGATIONS
+select count(*) from fin
+where final_outcome  is not Null
 
 
 
