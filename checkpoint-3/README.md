@@ -5,13 +5,13 @@ Thank you for reading this.
 For the interactive visualization part of this project, we are going to be using the D3 javascript library in ObservableHQ, to generate interactive and easy to understand visualizations and models.
 
 In order to ensure that you won't encounter any problems or errors 
-while opening the D3 Observable files on your computer please make sure to
+while opening the D3 ObservableHQ files on your computer please make sure to
 carefully read the next steps.
 
-Before you continue please be aware that checkpoint 3 was completed using D3 and Observable for the interactive visualization of the data after creating the necessary SQL queries as to retrieve and upload the final csv files required for the interactive figures to work on obervableHQ.
+Before you continue please be aware that checkpoint 3 was completed using D3 and ObservableHQ for the interactive visualization of the data after creating the necessary SQL queries as to retrieve and upload the final csv files required for the interactive figures to work on ObservableHQ.
 
 ## Prerequisites
-- All you need is an active internet connection and preferably use a web broswer like Safari or Google Chrome.
+- All you need is an active internet connection and preferably use a web broswer like Safari or Google Chrome to access ObservableHQ.
 
 ## Next steps:
 - Simply click on each one of the following links under each figure in order to access them.
