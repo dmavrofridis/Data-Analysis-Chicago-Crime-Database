@@ -1,4 +1,3 @@
-
 WITH area_info AS (
     SELECT * FROM data_area
         WHERE data_area.area_type LIKE 'community'
@@ -36,5 +35,6 @@ final as (
          order by trr_count desc
      )
 
-select * from final_with_polyg
-
+select community, sum(trr_count) as sum_trr from final_with_polyg
+group by community
+order by community
