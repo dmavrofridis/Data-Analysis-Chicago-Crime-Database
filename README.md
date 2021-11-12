@@ -7,3 +7,4 @@
 
 ### [Checkpoint 3: Interactive visualization](checkpoint-3)
 
+### [Checkpoint 4: Graph Analytics](checkpoint-4)
