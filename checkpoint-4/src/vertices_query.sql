@@ -1,16 +1,16 @@
 WITH filtered_trrs AS (
     SELECT officer_id, event_id, action_category FROM trr_trr
         JOIN trr_actionresponse ta on trr_trr.id = ta.trr_id
-        WHERE cast(action_category as float) >= %(action_response)s
+        WHERE cast(action_category as float) >= 1
 )
 ,
 events AS(
-SELECT count(officer_id) AS count, event_id FROM filtered_trrs
+SELECT count(distinct officer_id) AS count, event_id FROM filtered_trrs
     GROUP BY  event_id)
 
 ,
 linked_officer_ids AS (
-    SELECT events.event_id, officer_id, count FROM events
+    SELECT distinct officer_id, events.event_id, count FROM events
         LEFT JOIN trr_trr ON events.event_id = trr_trr.event_id
         WHERE count > 1
 )

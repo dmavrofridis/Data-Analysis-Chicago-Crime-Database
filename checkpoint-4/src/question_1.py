@@ -1,4 +1,18 @@
 # SPARK or Graph X
+from pyspark import *
+from pyspark.sql import *
+import pandas as pd
+import findspark
+import os
+
+
+if __name__ == '__main__':
+    os.environ["JAVA_HOME"] = "./packages/adoptopenjdk-8.jdk"
+    os.environ["SPARK_HOME"] = "./packages/spark-3.2.0-bin-hadoop3.2"
+
+    findspark.init()
+    # start the session
+    spark = SparkSession.builder.master("local[*]").getOrCreate()
 
 from pyspark import *
 from pyspark.sql import *
