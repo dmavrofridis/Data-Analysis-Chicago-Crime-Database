@@ -38,8 +38,8 @@ officer_connections AS (
 
 SELECT officer_id1 as src, officer_id2 as dst,  event_id FROM officer_connections );
 
--- SELECT * FROM connected WHERE (src, dst) NOT IN (SELECT * FROM partners)
---     ORDER BY src
-SELECT count(*) FROM partners
+SELECT * FROM connected WHERE (src, dst) NOT IN (SELECT * FROM partners)
+    ORDER BY src
+-- SELECT count(*) FROM partners
 
 -- SELECT * FROM officer_connections
