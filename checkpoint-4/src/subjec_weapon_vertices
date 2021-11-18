@@ -1,0 +1,27 @@
+
+WITH filtered_trrs AS (
+    SELECT officer_id, event_id, weapon_type FROM trr_trr
+        JOIN trr_subjectweapon ta on trr_trr.id = ta.trr_id
+    --WHERE  weapon_type like '%FIREARM%' or   weapon_type like '%KNIFE%' or   weapon_type like '%FISTS%' or weapon_type like '%VERBAL%' or weapon_type like '%FEET%')
+)
+,
+events AS(
+SELECT count(officer_id) AS count,  weapon_type, event_id FROM filtered_trrs
+    GROUP BY   weapon_type, event_id)
+
+,
+linked_officer_ids AS (
+    SELECT events.event_id,  events.weapon_type, officer_id, count FROM events
+        LEFT JOIN trr_trr ON events.event_id = trr_trr.event_id
+        WHERE count > 1
+)
+,
+linked_officers AS (
+    SELECT first_name,   weapon_type, middle_initial, last_name, gender, race, trr_count,
+           trr_percentile, id FROM data_officer
+            JOIN linked_officer_ids ON data_officer.id = linked_officer_ids.officer_id
+    )
+
+SELECT * FROM linked_officers
+
+
