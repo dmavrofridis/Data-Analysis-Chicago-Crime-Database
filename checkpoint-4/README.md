@@ -14,6 +14,7 @@ carefully read the next steps.
 
 ## Next steps:
 - Use the following link in order to access the notebook on Google Colab.
+- https://colab.research.google.com/drive/1Tt9zbcdQfKwKPcKdgG-pVYPMOUb2xwhP#scrollTo=kvC21LjFiDSH
 - Run each block of code or segment from the begining.
 
 ## Results & Analysis:
