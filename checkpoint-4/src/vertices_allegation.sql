@@ -37,4 +37,4 @@ linked_allegation_race as  (
     on linked_allegations.officer_id  = t1.id
 )
 
-select * from linked_allegation_race
+select allegation_id, count, race, id from linked_allegation_race
