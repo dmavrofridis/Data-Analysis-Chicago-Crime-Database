@@ -1,0 +1,20 @@
+with temp1 as (
+    select officer_id, allegation_id
+    from data_officerallegation
+)
+, temp2 as  (
+    select subject_race, officer_id from trr_trr
+    )
+
+, temp3 as (
+
+    select subject_race, allegation_id , temp2.officer_id from temp2
+    join temp1 t2 on temp2.officer_id = t2.officer_id
+) ,temp4 as (
+    select subject_race,
+    data_allegation.crid, cr_text from data_allegation
+    join temp3 on data_allegation.crid = temp3.allegation_id
+    )
+
+select distinct * from temp4
+where cr_text is not Null and subject_race is not Null
