@@ -11,11 +11,23 @@ def connect_to_db():
 
 def query_to_string():
     # Open and read the file as a single buffer
-    fd = open('cp5_query.sql', 'r')
+    fd = open(sql_file, 'r')
     sqlFile = fd.read()
     fd.close()
     return sqlFile
 
+def generate_topics(docs):
+    docs = list(filter(("").__ne__, docs))
+    docs = list(filter((None).__ne__, docs))
+    topic_model = bertopic.BERTopic(language="english", calculate_probabilities=True, verbose=True)
+    topics, probs = topic_model.fit_transform(docs)
+
+    freq = topic_model.get_topic_info()
+
+    print(freq)
+
+    for i in range(len(freq)):
+        print(topic_model.get_topic(i))
 
 if __name__ == '__main__':
     connection = connect_to_db()
@@ -24,9 +36,4 @@ if __name__ == '__main__':
     df = pd.read_sql(sql_query, connection)
     df.name = "cp5"
 
-    # print(df['crid'])
-    # f = lambda x: pd.unique([z for y in x for z in y])
-    f = lambda x : filter(None,x)
-    df1 = df.groupby(['crid'])['action_sub_category'].apply(list)
-    df1 = df1.apply(lambda row: filter(None, row))
-    print(df1)
+    generate_topics(df['cr_text'].tolist())
