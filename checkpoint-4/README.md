@@ -22,4 +22,3 @@ carefully read the next steps.
 ## Results & Analysis:
 #### For the completion of checkpoint 4, our team decided to identify and analyze the connections between Chicago PD police officers involved in the same tactical responses and complaints by generating and easy to understand graphs. We developed additional queries which allowed us to gather the necessary data and information while also filtering on the action response category for TRRs and use of force for complaints.
 
-
