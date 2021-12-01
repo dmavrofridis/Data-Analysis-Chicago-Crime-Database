@@ -12,13 +12,13 @@ carefully read the next steps.
 ## Prerequisites
 - Have an active and valid account and connection to Google Colab.
 - Open the Google Colab notebook on your google colab account by downloading the following file: [Google Colab Notebook file](src/checkpoint_4_revised.ipynb)
-- You can also publically access the notebook by following this link: https://colab.research.google.com/drive/1YsXNMRH4UgyYY7K_fN9PmSnZD-qtqPQp?usp=sharing
+- You can also publically access the notebook by following this link: https://colab.research.google.com/drive/1Obuza0CbIRiAX3XQblDqmau7K-vfn29C?usp=sharing
 
 ## Next steps:
 - Use the following link or download the file as instructed in order to access the notebook on Google Colab.
-- https://colab.research.google.com/drive/1YsXNMRH4UgyYY7K_fN9PmSnZD-qtqPQp?usp=sharing
+- https://colab.research.google.com/drive/1Obuza0CbIRiAX3XQblDqmau7K-vfn29C?usp=sharing
 - Run each block of code or segment from the begining, some files will download on your notebook that are required when importing libraries and using pySpark.
 
 ## Results & Analysis:
-For the completion of checkpoint 4, our team decided to identify and analyze the connections between Chicago PD police officers involved in the same tactical responses and complaints by generating and easy to understand graphs. We developed additional queries which allowed us to gather the necessary data and information while also filtering on the action response category for TRRs and use of force for complaints.
+For the completion of checkpoint 4, our team decided to identify and analyze the connections between Chicago PD police officers involved in the same tactical responses and complaints by generating easy to understand graphs. We developed additional queries which allowed us to gather the necessary data and information while also filtering on the action response category for TRRs and use of force for complaints.
 
