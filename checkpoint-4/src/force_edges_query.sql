@@ -1,10 +1,6 @@
-witH officer_allegation_filter as (
+with officer_allegation_filter as (
     select id,category from data_allegationcategory)
     --where category = 'Use Of Force' )
-
-
-
-
 
 
 
@@ -29,12 +25,11 @@ where category = 'Use Of Force'
          left join  joined_officer_allegation_filter t2 on   t1.allegation_id = t2.allegation_id
          ),
 
-
-
-linked_allegation_race as  (
-
-    select * from   linked_allegations join (select race, id from data_officer) as t1
-    on linked_allegations.officer_id  = t1.id
+   officer_connections AS (
+    SELECT A.officer_id AS officer_id1, B.officer_id AS officer_id2, A.allegation_id AS allegation_id
+        FROM linked_allegations A, linked_allegations B
+        WHERE A.allegation_id = B.allegation_id
+            AND A.officer_id <> B.officer_id
+        ORDER BY officer_id1
 )
-
-select allegation_id, count, race, id from linked_allegation_race
+select officer_id1 AS src, officer_id2 AS dst, allegation_id from  officer_connections

@@ -4,7 +4,7 @@ WITH filtered_trrs AS (
         WHERE cast(action_category as float) >= %(action_response)s
 )
 ,
-     events AS(
+events AS(
 SELECT count(officer_id) AS count, event_id FROM filtered_trrs
     GROUP BY  event_id)
 
@@ -15,12 +15,10 @@ linked_officer_ids AS (
         WHERE count > 1
 )
 ,
-officer_connections AS (
-    SELECT A.officer_id AS officer_id1, B.officer_id AS officer_id2, A.event_id AS event_id
-        FROM linked_officer_ids A, linked_officer_ids B
-        WHERE A.event_id = B.event_id
-            AND A.officer_id <> B.officer_id
-        ORDER BY officer_id1
-)
+linked_officers AS (
+    SELECT first_name, middle_initial, last_name, gender, race, trr_count,
+           trr_percentile, id FROM data_officer
+            JOIN linked_officer_ids ON data_officer.id = linked_officer_ids.officer_id
+    )
 
-SELECT officer_id1 as src, officer_id2 as dst,  event_id FROM officer_connections
+SELECT * FROM linked_officers

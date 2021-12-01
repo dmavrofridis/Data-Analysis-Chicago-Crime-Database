@@ -5,15 +5,15 @@ CREATE TEMP TABLE partners AS (
         WHERE a.start_timestamp = b.start_timestamp AND a.beat_id = b.beat_id
         AND a.present_for_duty AND b.present_for_duty AND a.officer_id <> b.officer_id
             GROUP BY a.officer_id, b.officer_id
-            HAVING count(*) > 30
+            HAVING count(*) > 100
 
 );
 DROP TABLE IF EXISTS connected;
 CREATE TEMP TABLE connected AS (
 WITH filtered_trrs AS (
-    SELECT officer_id, event_id, trr_datetime, weapon_description FROM trr_trr
-        JOIN  trr_subjectweapon ta on trr_trr.id = ta.trr_id
-    WHERE  weapon_type like '%FIREARM%' or  weapon_type like '%FIREARM%'
+    SELECT officer_id, event_id, trr_datetime, action_category FROM trr_trr
+        JOIN trr_actionresponse ta on trr_trr.id = ta.trr_id
+        WHERE cast(action_category as float) >= %(action_response)s
 )
 ,
 events AS(
@@ -37,8 +37,4 @@ officer_connections AS (
 )
 
 SELECT officer_id1 as src, officer_id2 as dst,  event_id FROM officer_connections );
-
 SELECT * FROM connected WHERE (src, dst) NOT IN (SELECT * FROM partners)
-    ORDER BY src
-
-
