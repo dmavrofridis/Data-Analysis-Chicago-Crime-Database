@@ -11,8 +11,7 @@ carefully read the next steps.
 
 ## Prerequisites
 - Have an active and valid account and connection to Google Colab.
-- Open the Google Colab notebook on your google colab account by downloading the following file: 
-- [Google Colab Notebook file](src/Checkpoint_4_Revised.ipynb)
+- Open the Google Colab notebook on your google colab account by downloading the following file: [Google Colab Notebook file](src/Checkpoint_4_Revised.ipynb)
 - You can also publically access the notebook by following this link: https://colab.research.google.com/drive/1YsXNMRH4UgyYY7K_fN9PmSnZD-qtqPQp?usp=sharing
 
 ## Next steps:
