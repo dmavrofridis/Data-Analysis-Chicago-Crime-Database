@@ -12,11 +12,11 @@ carefully read the next steps.
 ## Prerequisites
 - Have an active and valid account and connection to Google Colab.
 - Open the Google Colab notebook on your google colab account by downloading the following file: [Google Colab Notebook file](src/checkpoint_4_revised.ipynb)
-- You can also publically access the notebook by following this link: https://colab.research.google.com/drive/1Obuza0CbIRiAX3XQblDqmau7K-vfn29C?usp=sharing
+- You can also publically access the notebook by following this link: https://colab.research.google.com/drive/1nNirZBci5Wx18rNZIN3SCsND0b6GzJVG?usp=sharing
 
 ## Next steps:
 - Use the following link or download the file as instructed in order to access the notebook on Google Colab.
-- https://colab.research.google.com/drive/1Obuza0CbIRiAX3XQblDqmau7K-vfn29C?usp=sharing
+- https://colab.research.google.com/drive/1nNirZBci5Wx18rNZIN3SCsND0b6GzJVG?usp=sharing
 - Run each block of code or segment from the begining, some files will download on your notebook that are required when importing libraries and using pySpark.
 
 ## Results & Analysis:
